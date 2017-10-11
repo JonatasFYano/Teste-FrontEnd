@@ -1,0 +1,260 @@
+.float-right{float: right;}
+.float-left{float: left;}
+
+body{background-color: #e2e4e1!important;}
+
+body h1{
+    color: #4b5459;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body p{
+	color: #4b5459;
+	font-weight: 500;
+	margin: 0px;
+}
+
+header{
+	background-color: #364147;
+	width: 100%;
+}
+
+header .header-title{
+	display: inline-block;
+	color: #e7e9e7;
+	font-size: 20px;
+	font-weight: 500;
+	padding:16px 0px;
+}
+
+header i{
+	display: inline-block;
+	color: #e7e9e7;
+	font-size: 20px;
+	padding-left: 25px;
+	padding-right: 10px;
+}
+
+header input{
+	float: right;
+	background-color: #2a3138;
+	color: #e7e9e7;
+	padding: 15px;
+	border: none;
+	height: 60px;
+	width: 50%;
+}
+
+.body{margin-top: 25px;}
+
+.container .page-header{border-bottom: 1px solid #4b5459;}
+
+add-icon{
+	
+}
+
+.title-over-card{
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+.card-lista{
+	background-color: #ffffff; 
+	padding:10px 20px 10px 10px;
+	margin-bottom: 10px;
+}
+
+.over-card{
+	padding-top: 5px;
+	max-height: 476px;
+    overflow-y: auto;
+}
+
+.carro-valido{color: #509179;}
+
+.subtext{color: #babdbd;}
+
+.card-descricao{background-color: #f1f2f0;}
+
+.card-descricao-body{
+	padding: 10px 10px 30px 10px;
+	border-bottom: 1px solid #d0d1cf;
+}
+
+p.title-card-descricao{
+	color: #509179;
+	font-size: 16px;
+	margin-bottom: 25px;
+	font-weight: bold;
+}
+
+.ano{
+	display: inline-block;
+    float: right;
+    margin-right: 40%;
+}
+
+.marca{	display: inline-block;}
+
+.content-descricao{
+	padding-top: 30px;
+	max-height: 250px;
+    overflow: auto;
+}
+
+.btn{
+	background-color: #45535a;
+	color: #eeefed;
+	border-radius: 0px!important;
+	padding: 10px 40px!important;
+}
+
+.card-descricao-editar{padding: 10px 20px 10px 10px;}
+
+.card-modal{
+	padding:30px;
+	background-color: #e2e4e1;
+	width: 650px;
+	height: 550px;
+}
+
+h1.title-modal {font-size: 26px; margin-top: 0px;}
+.content-modal{padding-top: 35px;}
+.button-section{padding-top: 40px; text-align: right;}
+
+.group label {	
+  position: absolute;
+  top: 32.66667px;
+  color: #999999;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: text;
+  transition: .25s ease;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding-top: 36.66667px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 36.66667px;
+  transition: .3s ease;
+}
+input:valid ~ label {
+  top: 0;
+  font: 700 22px Roboto;
+  color: rgba(255, 255, 255, 0.5);
+}
+input:focus {
+  outline: none;
+}
+
+input:focus ~ label {
+  top: 0;
+  color: #7197b0;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: white !important;
+}
+
+.bar {
+  background: #999999;
+  content: '';
+  width: 550px;
+  height: 1px;
+  transition: .3s ease;
+  position: relative;
+}
+.bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #7197b0;
+  transform: translateX(-100%);
+}
+
+::selection {
+  background: rgba(33, 150, 243, 0.3);
+}
+
+.group {
+  width: 40%;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; 
+  height: 8px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0;
+  bottom: -4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.checkbox-style{
+	display: inline-block;
+    padding: 0px 0px 20px 115px;
+}

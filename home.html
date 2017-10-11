@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<title>Teste FrontEnd</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body  ng-app="myApp" ng-controller="myCtrl">
+	<header>
+		<i>Icon</i>
+		<div class="header-title">
+			FULLSTACK
+		</div>
+		<input type="text" id="buscaVeiculo" name="buscaVeiculo" placeholder="BUSCA por veiculo">
+	</header>
+
+<div class="container body">
+	<div class="page-header">
+	    <h1>VEÍCULO</h1>
+	    <i class="material-icons add-icon"></i>
+  	</div>
+  	<div class="content row">
+  		<div id="columChange" class="over-card col-sm-12">
+  		<p class="title-over-card">Lista de veículos</p>
+  			<div class="card-lista" ng-repeat="x in car" ng-click="openDetail()">
+  				<p>{{x.name}}</p>
+  				<p class="carro-valido">{{x.detail}}</p>
+  				<p class="subtext">{{x.year}}</p>
+  				<i class="material-icons add-icon"></i>
+  			</div>
+  		</div>
+  		<div class="over-card col-sm-6" ng-hide="!clickCar">
+  			<p class="title-over-card">Detalhes</p>
+			<div class="card-descricao">
+				<div class="card-descricao-body">
+					<p class="title-card-descricao">Palio G5 SP.1.6 Flex</p>
+					<div class="marca">
+						<p>Marca</p><p class="subtext">FIAT</p>
+					</div>
+					<div class="ano">
+						<p>Ano</p><p class="subtext">2016</p>
+					</div>
+					<div class="content-descricao">
+						{{detailText}}
+					</div>
+				</div>
+				<div class="card-descricao-editar">
+					<div class="btn">EDITAR</div>
+					{{teste}}
+				</div>
+			</div>
+  		</div>
+  	</div>
+</div>
+
+
+</body>
+</html>
