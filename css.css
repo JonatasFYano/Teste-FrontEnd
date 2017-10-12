@@ -48,7 +48,7 @@ header input{
 
 .body{margin-top: 25px;}
 
-.container .page-header{border-bottom: 1px solid #4b5459;}
+.container .page-header{border-bottom: 1px solid #4b5459; position:relative;}
 
 add-icon{
 	
@@ -113,6 +113,7 @@ p.title-card-descricao{
 .card-descricao-editar{padding: 10px 20px 10px 10px;}
 
 .card-modal{
+	position: relative;
 	padding:30px;
 	background-color: #e2e4e1;
 	width: 650px;
@@ -121,14 +122,14 @@ p.title-card-descricao{
 
 h1.title-modal {font-size: 26px; margin-top: 0px;}
 .content-modal{padding-top: 35px;}
-.button-section{padding-top: 40px; text-align: right;}
+.button-section{text-align: right;}
 
 .group label {	
   position: absolute;
-  top: 32.66667px;
+  top: 26.66667px;
   color: #999999;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   cursor: text;
   transition: .25s ease;
@@ -146,8 +147,6 @@ input {
 }
 input:valid ~ label {
   top: 0;
-  font: 700 22px Roboto;
-  color: rgba(255, 255, 255, 0.5);
 }
 input:focus {
   outline: none;
@@ -258,3 +257,16 @@ input:checked + .slider:before {
 	display: inline-block;
     padding: 0px 0px 20px 115px;
 }
+
+.add-icon-header{
+	position: absolute;
+    right: 0px;
+    bottom: 17px;
+    cursor:default;
+}
+
+.modal{display:none; position: fixed; left:0px; top:0px; width:100%; height:100%; z-index:999; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.sombraopacity{position: absolute; width:100%; height:100%; background:#000; opacity:0.6;}
+
+.descricao-modal{height: 200px;width: 100%;}
+.input-descricao{height: 160px;}

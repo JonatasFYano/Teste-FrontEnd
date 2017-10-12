@@ -7,6 +7,8 @@
 <link rel="stylesheet" type="text/css" href="css.css">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,21 +24,21 @@
 		<div class="header-title">
 			FULLSTACK
 		</div>
-		<input type="text" id="buscaVeiculo" name="buscaVeiculo" placeholder="BUSCA por veiculo">
+			<input type="text" name="buscaVeiculo" placeholder="BUSCA por veiculo" ng-model="buscaVeiculo" ng-keyup="$event.keyCode == 13 && busca(buscaVeiculo)">
 	</header>
 
 <div class="container body">
 	<div class="page-header">
 	    <h1>VEÍCULO</h1>
-	    <i class="material-icons add-icon"></i>
+	    <i class="material-icons add-icon-header" ng-click="adicionaVeiculo()">&#xE147;</i>
   	</div>
   	<div class="content row">
   		<div id="columChange" class="over-card col-sm-12">
   		<p class="title-over-card">Lista de veículos</p>
-  			<div class="card-lista" ng-repeat="x in car" ng-click="openDetail()">
-  				<p>{{x.name}}</p>
-  				<p class="carro-valido">{{x.detail}}</p>
-  				<p class="subtext">{{x.year}}</p>
+  			<div class="card-lista" ng-repeat="x in veiculos" ng-click="openDetail(x)">
+  				<p>{{x.marca}}</p>
+  				<p class="carro-valido">{{x.veiculo}}</p>
+  				<p class="subtext">{{x.ano}}</p>
   				<i class="material-icons add-icon"></i>
   			</div>
   		</div>
@@ -44,12 +46,12 @@
   			<p class="title-over-card">Detalhes</p>
 			<div class="card-descricao">
 				<div class="card-descricao-body">
-					<p class="title-card-descricao">Palio G5 SP.1.6 Flex</p>
+					<p class="title-card-descricao">{{veiculoDescricao}}</p>
 					<div class="marca">
-						<p>Marca</p><p class="subtext">FIAT</p>
+						<p>Marca</p><p class="subtext">{{marcaDescricao}}</p>
 					</div>
 					<div class="ano">
-						<p>Ano</p><p class="subtext">2016</p>
+						<p>Ano</p><p class="subtext">{{anoDescricao}}</p>
 					</div>
 					<div class="content-descricao">
 						{{detailText}}
